@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Python",
+        "author": "Gvido",
+        "year": "1989",
+        "status": "в наличии"
+    },
+    {
+        "id": 2,
+        "title": "Pandas",
+        "author": "Alex Row",
+        "year": "1999",
+        "status": "в наличии"
+    }
+]
