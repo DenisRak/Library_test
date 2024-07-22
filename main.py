@@ -81,13 +81,14 @@ class Library:
 
 
     @staticmethod
-    def print_book(book):
+    def print_book(book: dict):
         """Вывод информации об одной книге"""
         print(f"ID: {book['id']}, Название: {book['title']}, Автор: {book['author']}, Год: {book['year']}, Статус: {book['status']}")
 
-    def check_id(self, book_id):
-        list_id = (el['id'] for el in self.books)
-        return book_id in list_id
+    def check_id(self, book_id: int) -> bool:
+        """Проверка присутствия ID"""
+        gen_id = (el['id'] for el in self.books)
+        return book_id in gen_id
 
 def main():
     library = Library('library.json')
