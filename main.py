@@ -85,7 +85,7 @@ class Library:
         print(f"ID: {book['id']}, Название: {book['title']}, Автор: {book['author']}, Год: {book['year']}, Статус: {book['status']}")
 
     def check_id(self, book_id):
-        list_id = [el['id'] for el in self.books]
+        list_id = (el['id'] for el in self.books)
         return book_id in list_id
 
 def main():
