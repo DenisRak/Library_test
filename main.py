@@ -106,10 +106,19 @@ def main():
         choice = input("Выберите действие: ")
 
         if choice == '1':
-            title = input("Введите название книги: ")
-            author = input("Введите автора книги: ")
-            year = input("Введите год издания книги: ")
-            library.add_book(title, author, year)
+            while True:
+                print("1. Добавляем книгу")
+                print("0. Закончили добавлять")
+                subchoice = input("Выберите действие: ")
+                if subchoice == "1":
+                    title = input("Введите название книги: ")
+                    author = input("Введите автора книги: ")
+                    year = input("Введите год издания книги: ")
+                    library.add_book(title, author, year)
+                elif subchoice == "0":
+                    break
+                else:
+                    print("Некорректный выбор. Попробуйте снова.")
         elif choice == '2':
             try:
                 book_id = int(input("Введите ID книги для удаления: "))

@@ -19,5 +19,12 @@
         "author": "Толстой Л.Н.",
         "year": "1876",
         "status": "в наличии"
+    },
+    {
+        "id": 4,
+        "title": "Samsung tutorial",
+        "author": "Yoshi Goshi",
+        "year": "2022",
+        "status": "в наличии"
     }
 ]
