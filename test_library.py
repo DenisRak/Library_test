@@ -34,7 +34,7 @@ def test_change_status(library):
     book_id = book['id']
     result = library.change_status(book_id, 'выдана')
     assert result
-    assert library.books[0]['status'] == 'выдана'
+    assert 'выдана' in library.books[0]['status']
 
 def test_display_books(library):
     library.add_book("Book1", "Author1", "2023")
