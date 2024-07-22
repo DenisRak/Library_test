@@ -1,5 +1,5 @@
 import json
-
+from datetime import datetime
 
 class Library:
 
@@ -73,7 +73,8 @@ class Library:
     def change_status(self, book_id: int, new_status: str) -> str:
         """Изменение статуса книги"""
         book_to_change = next((book for book in self.books if book['id'] == book_id))
-        book_to_change['status'] = new_status
+        data = datetime.now().strftime('%Y-%m-%d')
+        book_to_change['status'] = new_status + " C " + data
         self.save_data(self.books)
         print(f"Статус книги с ID {book_id} изменен на '{new_status}'.")
         return new_status
