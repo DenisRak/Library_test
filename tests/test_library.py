@@ -1,6 +1,6 @@
 import pytest
 import os
-from main import Library
+from library.library import Library
 
 @pytest.fixture
 def library():
